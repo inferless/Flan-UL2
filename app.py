@@ -1,9 +1,13 @@
+import os
+os.environ["HF_HUB_ENABLE_HF_TRANSFER"]='1'
+from huggingface_hub import snapshot_download
 from transformers import T5ForConditionalGeneration, AutoTokenizer
 import torch
 
 class InferlessPythonModel:
     def initialize(self):
         model_id = "google/flan-ul2"  # Specify the model repository ID
+        snapshot_download(repo_id=model_id,allow_patterns=["*.bin"])
         self.model = T5ForConditionalGeneration.from_pretrained(model_id).to("cuda")                                                                 
         self.tokenizer = AutoTokenizer.from_pretrained(model_id)
         
