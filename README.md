@@ -2,13 +2,13 @@
 Flan-UL2, based on the T5 architecture, features 20 billion parameters and is optimized for NLP tasks through "Flan" prompt tuning. It excels in zero-shot, few-shot, and fine-tuning scenarios. The model has a 2048 token context window, enhancing its ability to handle long documents. It supports a variety of tasks like summarization, translation, and question answering, making it highly versatile for diverse applications. Link to the model [Flan-UL2](https://huggingface.co/google/flan-ul2).
 
 ## TL;DR:
-- Deployment of Stable-Diffusion-3.5-Large-Turbo model using [Diffusers](https://github.com/huggingface/diffusers).
+- Deployment of Flan-UL2 model using [Transformers](https://github.com/huggingface/transformers).
 - Dependencies defined in `inferless-runtime-config.yaml`.
 - GitHub/GitLab template creation with `app.py`, `inferless-runtime-config.yaml` and `inferless.yaml`.
 - Model class in `app.py` with `initialize`, `infer`, and `finalize` functions.
 - Custom runtime creation with necessary system and Python packages.
 - Model import via GitHub with `input_schema.py` file.
-- Recommended GPU: NVIDIA A10.
+- Recommended GPU: NVIDIA A100.
 - Custom runtime selection in advanced configuration.
 - Final review and deployment on the Inferless platform.
 
