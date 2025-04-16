@@ -1,6 +1,17 @@
 # Deploy Flan-UL2 using Inferless
 Flan-UL2, based on the T5 architecture, features 20 billion parameters and is optimized for NLP tasks through "Flan" prompt tuning. It excels in zero-shot, few-shot, and fine-tuning scenarios. The model has a 2048 token context window, enhancing its ability to handle long documents. It supports a variety of tasks like summarization, translation, and question answering, making it highly versatile for diverse applications. Link to the model [Flan-UL2](https://huggingface.co/google/flan-ul2).
 
+## TL;DR:
+- Deployment of Stable-Diffusion-3.5-Large-Turbo model using [Diffusers](https://github.com/huggingface/diffusers).
+- Dependencies defined in `inferless-runtime-config.yaml`.
+- GitHub/GitLab template creation with `app.py`, `inferless-runtime-config.yaml` and `inferless.yaml`.
+- Model class in `app.py` with `initialize`, `infer`, and `finalize` functions.
+- Custom runtime creation with necessary system and Python packages.
+- Model import via GitHub with `input_schema.py` file.
+- Recommended GPU: NVIDIA A10.
+- Custom runtime selection in advanced configuration.
+- Final review and deployment on the Inferless platform.
+
 ### Fork the Repository
 Get started by forking the repository. You can do this by clicking on the fork button in the top right corner of the repository page.
 
@@ -16,7 +27,7 @@ Log in to your inferless account, select the workspace you want the model to be 
 
 Select the PyTorch as framework and choose **Repo(custom code)** as your model source and select your provider, and use the forked repo URL as the **Model URL**.
 
-Enter all the required details to Import your model. Refer [this link](https://docs.inferless.com/integrations/github-custom-code) for more information on model import.
+Enter all the required details to Import your model. Refer [this link](https://docs.inferless.com/integrations/git-custom-code/git--custom-code) for more information on model import.
 
 ---
 ## Customizing the Code
